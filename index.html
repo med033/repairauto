@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Auto Repair - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	
+	<script src="js/script.js"></script>
+
+</head>
+  <body>
+	  	<!-----------------------login / registration  -->
+		  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			  <div class="modal-content">
+				  <div class="modal-header tit-up">
+					  
+					  <h4 class=""> <i class="fas fa-sign-in-alt"></i> Customer Login</h4>
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+					</div>
+				  <div class="modal-body customer-box">
+					  <!-- Nav tabs -->
+					  <ul class="nav">
+						  <li><a class="btn btn-secondary btn-radius btn-brd grd1" href="#Login" data-toggle="tab" style="margin-right: 2px;">Login</a></li> 
+						  <li><a class="btn btn-secondary btn-radius btn-brd grd1" href="#Registration" data-toggle="tab">Registration</a></li>
+					  </ul>
+					  
+					  <!-- Tab panes -->
+					  <div class="tab-content">
+						  <div class="tab-pane active" id="Login">
+							 
+							  <form role="form" class="form-horizontal" style="margin-top: 10px;">
+								  <div class="form-group">
+									  <div class="col-sm-12">
+										  <input class="form-control" id="email*" placeholder="email" type="text">
+									  </div>
+								  </div>
+								  <div class="form-group">
+									  <div class="col-sm-12">
+										  <input class="form-control" id="password*" placeholder="password" type="password">
+									  </div>
+								  </div>
+								  <div class="row">
+									  <div class="col-sm-10">
+										  <button type="submit" class="btn btn-secondary btn-radius btn-brd grd1" onclick="login()">
+											  Submit
+										  </button>
+										  <span id="error"></span>
+
+										  <!-- <a class="for-pwd" href="javascript:;">Forgot your password?</a> -->
+									  </div>
+								  </div>
+							  </form>
+						  </div>
+						  <div class="tab-pane" id="Registration">
+							  <form role="form" class="form-horizontal" style="margin-top: 10px;">
+								  <div class="form-group">
+									  <div class="col-sm-12">
+										  <input class="form-control"id="firstName" placeholder="First name" type="text">
+									  <span id="firstNameError"></span>
+										</div>
+								  </div>
+								  <div class="form-group">
+									<div class="col-sm-12">
+										<input class="form-control"id="lastName" placeholder="Last name" type="text">
+										<span id="lastNameError"></span>
+									</div>
+								</div>
+								  <div class="form-group">
+									  <div class="col-sm-12">
+										  <input class="form-control" id="email" placeholder="Email" type="email">
+										  <span id="emailError"></span>
+										  <span id="emailExistError"></span>
+
+										</div>
+								  </div>
+								  <div class="form-group">
+									  <div class="col-sm-12">
+										  <input class="form-control" id="tel" placeholder="Mobile" type="text">
+										  <span id="telError"></span>
+										</div>
+								  </div>
+								  <div class="form-group">
+									  <div class="col-sm-12">
+										<input type="password" class="form-control" id="password" name="name" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+										<span id="passwordError"></span>
+												</div>
+								  </div>
+								  <div class="form-group">
+									<div class="col-sm-12">
+										<input class="form-control" id="confirmPwd" placeholder="Confirm Password" type="password">
+										<span id="confirmPasswordError"></span>
+									</div>
+								</div>
+								  <div class="row">							
+									  <div class="col-sm-10">
+										  <button type="button" class="btn btn-secondary btn-radius btn-brd grd1"
+										 onclick="signup()" 
+										  >
+											  Save &amp; Continue
+										  </button>
+									      <button type="button" class="btn btn-secondary btn-radius btn-brd grd1" data-dismiss="modal" aria-hidden="true">
+											  Cancel</button>
+									  </div>
+								  </div>
+							  </form>
+						  </div>
+					  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <!-- LOADER -->
+
+		  <div id="preloader">
+			  <div class="loader-container">
+				  <div class="progress-br float shadow">
+					  <div class="progress__item"></div>
+				  </div>
+			  </div>
+		  </div>
+		  <!-- END LOADER -->	
+
+	  <!--BAR IN BLACK ON TOP   -->
+		<div class="wrap">
+	    <div class="container">
+				<div class="row justify-content-between">
+					<div class="col-md-3 d-flex align-items-center">
+						<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="45"
+						height="45"
+						fill="currentColor"
+						class="bi bi-tools"
+						viewBox="0 0 16 16"
+					  >
+						<path
+						  style="color: tomato"
+						  d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"
+						/>
+						<path
+						  style="color: azure"
+						  d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"
+						/>
+					  </svg>
+					  <a
+						class="navbar-brand"
+						href="index.html"
+						style="
+						  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+							sans-serif;
+						  font-size: 35px;
+						  color: tomato;
+						  font-weight: bolder;
+						"
+					  >
+						<strong>Un</strong>Broken</a
+					  >
+					</div>
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col">
+								<div class="top-wrap d-flex">
+									<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-location-arrow"></span></div>
+									<div class="text"><span>Address</span><span>CHARGUIA 2 ARIANA</span></div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="top-wrap d-flex">
+									<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-location-arrow"></span></div>
+									<div class="text"><span>Call us</span><span>(+216) 50 989 783</span></div>
+								</div>
+							</div>
+							<div class="col-md-3 d-flex justify-content-end align-items-center">
+								<div class="social-media">
+					    		<p class="mb-0 d-flex">
+					    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fab fa-facebook-f"><i class="sr-only">Facebook</i> </span></a>
+					    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fab fa-twitter"><i class="sr-only">Twitter</i></span></a>
+					    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fab fa-instagram"><i class="sr-only">Instagram</i></span></a>
+					    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fab fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+					    		</p>
+				        </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- dynamic header --------------------------------------->
+
+		<div class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light navbar header_area sticky-header" id="ftco-navbar" >
+			<nav class="container" >
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+		  <!-- DYNAMIC HEADER  -->
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+			<nav style="height: 5px; background-color: tomato"
+            class="fixed-top navbar-fixed-top"></nav>
+	        <ul class="navbar-nav fixed" id="linksId">
+
+	        </ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item"><a href="cart.html" class=""><span id="bagCart"></span><span id="ordersNb"  style="font-weight: bold;"></span></a></li>
+            <script>
+				setHeader();
+				ordersNb();
+			</script>
+			</ul>
+		
+	      </div>
+	    </nav>
+	</div>
+
+<!-- -------------------------end header------------------------- -->
+
+
+
+    <!-- SLIDE  -->
+    <div class="hero-wrap">
+	    <div class="home-slider owl-carousel">
+	      <div class="slider-item" style="background-image:url(images/4.jpg);">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text align-items-center justify-content-start">
+		          <div class="col-md-6 ftco-animate">
+		          	<div class="text w-100">
+		          		<h2><strong style="font-size: 20px;">#1 Cell Phone Repair Computer/Laptop Repair Service </strong></h2>
+			            <h1 class="mb-4">Make your device last longer</h1>
+			            <p><a href="#" class="btn btn-primary" onclick="bookappoint();">Book an appointment</a></p>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item" style="background-image:url(images/3.jpg)">
+	      	<div class="overlay"></div>
+	        <div class="container">
+	          <div class="row no-gutters slider-text align-items-center justify-content-start">
+		          <div class="col-md-6 ftco-animate">
+		          	<div class="text w-100">
+		          		<h2> <strong style="font-size: 20px;">Dont waste time now</strong> </h2>
+			            <h1 class="mb-4">Bring your broken device</h1>
+			            <p><a class="btn btn-primary"   onclick="bookappoint();"        
+							>Book an appointment</a></p>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+		
+		<section class="intro">
+			<div class="container intro-wrap">
+				<div class="row no-gutters">
+					<div class="col-md-12 col-lg-9 bg-intro d-sm-flex align-items-center align-items-stretch">
+						<div class="intro-box d-flex align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<i class="flaticon-repair"></i>
+							</div>
+							<h2 class="mb-0"> Are you ready? <span>Let's repair it now!</span></h2>
+						</div>
+					<a href="#" class="bg-primary btn-custom d-flex align-items-center" onclick="bookappoint();"><span>Book an Appointment now </span></a>
+					</div>
+				</div>
+			</div>	
+		</section><p></p>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-8 heading-section text-center ftco-animate">
+          	<span class="subheading">We offer Electronics Repair And Beyond </span>
+            <h2>WE’RE THE ULTIMATE DESTINATION FOR ALL TEC THINGS</h2>
+          </div>
+        </div>
+    		<!-- <div class="row">
+          <div class="col-md-4 services ftco-animate">
+            <div class="d-block d-flex">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-car-service"></span>
+              </div>
+              <div class="media-body pl-3">
+                <h3 class="heading">Oil change</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p><a href="#" class="btn-custom">Read more</a></p>
+              </div>
+            </div>
+            <div class="d-block d-flex">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-tyre"></span>
+              </div>
+              <div class="media-body pl-3">
+                <h3 class="heading">Tire Change</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p><a href="#" class="btn-custom">Read more</a></p>
+              </div>
+            </div> 
+
+          </div>
+          <div class="col-md-4 services ftco-animate">
+            <div class="d-block d-flex">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-battery"></span>
+              </div>
+              <div class="media-body pl-3">
+                <h3 class="heading">Batteries</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p><a href="#" class="btn-custom">Read more</a></p>
+              </div>
+            </div> 
+            <div class="d-block d-flex">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-car-engine"></span>
+              </div>
+              <div class="media-body pl-3">
+                <h3 class="heading">Engine Repair</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p><a href="#" class="btn-custom">Read more</a></p>
+              </div>
+            </div>    
+          </div>
+
+          <div class="col-md-4 services ftco-animate">
+            <div class="d-block d-flex">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-tow-truck"></span>
+              </div>
+              <div class="media-body pl-3">
+                <h3 class="heading">Tow Truck</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p><a href="#" class="btn-custom">Read more</a></p>
+              </div>
+            </div>
+            <div class="d-block d-flex">
+              <div class="icon d-flex justify-content-center align-items-center">
+            		<span class="flaticon-repair"></span>
+              </div>
+              <div class="media-body pl-3">
+                <h3 class="heading">Car Maintenance</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p><a href="#" class="btn-custom">Read more</a></p>
+              </div>
+            </div>       
+          </div>
+        </div> -->
+    	</div>
+    </section>
+   	
+<!-- experience years  -->
+    <section class="ftco-counter" id="section-counter">
+    	<div class="container">
+				<div class="row">
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+              </div>
+              <div class="text">
+              	<span>Years of Experienced</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="200">0</strong>
+              </div>
+              <div class="text">
+              	<span>Project completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="1200">0</strong>
+              </div>
+              <div class="text">
+              	<span>Happy Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 text-center">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+              </div>
+              <div class="text">
+              	<span>Award Winning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+
+<!-- Testimonies -->
+
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section heading-section-white text-center ftco-animate">
+          	<span class="subheading">Testimonies</span>
+            <h2>Happy Clients &amp; Feedbacks</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></span></div>
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+
+
+    
+
+    <footer class="footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg">
+            <div class="ftco-footer-widget mb-4">
+			<div class="">
+						<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="45"
+						height="45"
+						fill="currentColor"
+						class="bi bi-tools"
+						viewBox="0 0 16 22"
+					  >
+						<path
+						  style="color: tomato"
+						  d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"
+						/>
+						<path
+						  style="color: azure"
+						  d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"
+						/>
+					  </svg>
+					  
+					  <a
+						class="navbar-brand"
+						href="index.html"
+						style="
+						  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+							sans-serif;
+						  font-size: 35px;
+						  color: tomato;
+						  font-weight: bolder;
+						  
+						"
+					  >
+						<strong>Un</strong>Broken</a
+					  >
+					</div>           
+			  <p>Unbroken is a trusted leader for electronics repair, protection, customization, and enhancement. Our certified technicians are trained to provide superior service, expert repairs, and the most beneficial solution for your situation.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                <li class="ftco-animate"><a href="#"><span class="fab fa-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fab fa-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="fab fa-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Phone repair</li>
+                <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Laptop diagnostic</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>Several game concole supoort</a></li>
+                <li><a href="#" class="py-1 d-block"><span class="fa fa-check mr-3"></span>electronic spare parts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Contact information</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon fa fa-map-marker"></span><span class="text">CHARGUIA 2 SOKRA,ARIANA,TUNISIA</span></li>
+	                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+216 50 989 783</span></a></li>
+	                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info-Unbroken@outlook.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Business Hours</h2>
+              <div class="opening-hours">
+              	<h4>Opening Days:</h4>
+              	<p class="pl-3">
+              		<span>Monday – Friday : 9am to 20 pm</span>
+              		<span>Saturday : 9am to 17 pm</span>
+              	</p>
+              	<h4>Vacations:</h4>
+              	<p class="pl-3">
+              		<span>All Sunday Days</span>
+              		<span>All Official Holidays</span>
+              	</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+	  	var adminsAdded = localStorage.getItem("adminsAdded");
+		if (adminsAdded) {
+			
+		} else {
+			insertAdmins();
+		}
+  </script>  
+  </body>
+</html>
